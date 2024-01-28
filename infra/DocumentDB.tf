@@ -1,6 +1,6 @@
 resource "aws_docdb_subnet_group" "service" {
   name       = var.document_db_name
-  subnet_ids = module.vpc.private_subnets
+  subnet_ids = module.vpc.public_subnets
 }
 
 resource "aws_docdb_cluster_instance" "service" {
